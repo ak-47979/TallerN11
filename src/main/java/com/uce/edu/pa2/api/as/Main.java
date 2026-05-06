@@ -19,7 +19,8 @@ public class Main {
 
     public static class App implements QuarkusApplication {
 
-      
+        @Inject
+        private CompraService compraService;
         
 
         @Override
@@ -27,7 +28,8 @@ public class Main {
 
             Compra comp1 = new Compra("Andy Suquilandi", Double.valueOf(100));
             
-System.out.println("s");
+
+            this.compraService.aplicar(comp1);
 
 
             return 0;
