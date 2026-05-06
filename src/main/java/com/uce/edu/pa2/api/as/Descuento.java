@@ -1,4 +1,4 @@
-package uce.edu.pa2.api;
+package com.uce.edu.pa2.api.as;
 
 public interface Descuento {
 

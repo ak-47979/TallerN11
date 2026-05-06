@@ -1,4 +1,4 @@
-package uce.edu.pa2.api;
+package com.uce.edu.pa2.api.as;
 
 
 import jakarta.enterprise.context.ApplicationScoped;
@@ -12,12 +12,14 @@ public class ProcesadorCompraService {
     private Instance<Descuento> descuentos;
     
     public void procesar(Compra compra){
+
         double total = compra.getSubTotal();
+
         for(Descuento des: descuentos){
-            
-           total= des.aplicar(total);
+            total= des.aplicar(total);
         }
+        
         compra.setTotal(total);
-        System.out.println("Su valor a pagar es: " + compra.getTotal());
+        System.out.println("Precio despues de descuento: "+ compra.getTotal());
     }
 }

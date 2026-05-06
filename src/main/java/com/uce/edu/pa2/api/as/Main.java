@@ -1,4 +1,4 @@
-package uce.edu.pa2.api;
+package com.uce.edu.pa2.api.as;
 
 import io.quarkus.runtime.Quarkus;
 import io.quarkus.runtime.QuarkusApplication;
@@ -6,7 +6,6 @@ import io.quarkus.runtime.annotations.QuarkusMain;
 import jakarta.enterprise.context.control.ActivateRequestContext;
 import jakarta.enterprise.inject.spi.CDI;
 import jakarta.inject.Inject;
-import net.bytebuddy.asm.Advice.This;
 
 @QuarkusMain
 
@@ -20,18 +19,15 @@ public class Main {
 
     public static class App implements QuarkusApplication {
 
-        @Inject
-        private ProcesadorCompraService procesadorCompraService;
       
+        
 
         @Override
         public int run(String... args) throws Exception {
 
             Compra comp1 = new Compra("Andy Suquilandi", Double.valueOf(100));
-                       Compra comp2 = new Compra("Paul Aguas", Double.valueOf(200));
-
-            this.procesadorCompraService.procesar(comp1);
-            this.procesadorCompraService.procesar(comp2);
+            
+System.out.println("s");
 
 
             return 0;

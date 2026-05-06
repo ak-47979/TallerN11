@@ -1,8 +1,10 @@
-package uce.edu.pa2.api;
+package com.uce.edu.pa2.api.as;
 
+import jakarta.annotation.Priority;
 import jakarta.enterprise.context.ApplicationScoped;
 
 @ApplicationScoped
+
 public class DescuentoSOLCA implements Descuento {
 
     @Override
@@ -11,7 +13,6 @@ public class DescuentoSOLCA implements Descuento {
 
         double valorADescontar = valor*0.20;
         return valor - valorADescontar;
-        //return valor*1.15; 
     }
 
 }

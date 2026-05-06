@@ -1,8 +1,10 @@
-package uce.edu.pa2.api;
+package com.uce.edu.pa2.api.as;
 
+import jakarta.annotation.Priority;
 import jakarta.enterprise.context.ApplicationScoped;
 
 @ApplicationScoped
+
 public class DescuentoBlackFriday implements Descuento {
 
 

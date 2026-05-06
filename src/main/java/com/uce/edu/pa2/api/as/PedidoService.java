@@ -1,4 +1,5 @@
 package com.uce.edu.pa2.api.as;
+
 import io.quarkus.arc.Unremovable;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
