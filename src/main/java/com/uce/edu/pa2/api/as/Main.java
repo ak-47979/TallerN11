@@ -1,4 +1,4 @@
-package com.uce.edu.pa2.api.as;
+package uce.edu.pa2.api;
 
 import io.quarkus.runtime.Quarkus;
 import io.quarkus.runtime.QuarkusApplication;
@@ -6,6 +6,7 @@ import io.quarkus.runtime.annotations.QuarkusMain;
 import jakarta.enterprise.context.control.ActivateRequestContext;
 import jakarta.enterprise.inject.spi.CDI;
 import jakarta.inject.Inject;
+import net.bytebuddy.asm.Advice.This;
 
 @QuarkusMain
 

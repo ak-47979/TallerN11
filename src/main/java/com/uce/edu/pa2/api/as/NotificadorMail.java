@@ -2,19 +2,30 @@ package com.uce.edu.pa2.api.as;
 
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.enterprise.inject.Default;
-
-@ApplicationScoped 
+/**
+ * Implementación del envío de notificaciones
+ * mediante correo electrónico.
+ */
+@ApplicationScoped
 @Default
-//esta lclase la va a getionar el contenedor de CDI,
-//  es decir, va a ser un bean gestionado por CDI
-    public class NotificadorMail implements Notificador {
+public class NotificadorMail implements Notificador {
 
-     public void enviar(String destino, String mensaje) {
-        System.out.println("Se envia un mail al correo: " + destino);
-        System.out.println("Con el mensaje: " + mensaje);
+    /**
+     * Envía un correo electrónico.
+     * 
+     * @param destino dirección de correo
+     * @param mensaje contenido del mensaje
+     */
+    public void enviar(
+            String destino,
+            String mensaje) {
 
+        System.out.println(
+            "Se envia un mail al correo: "
+            + destino);
+
+        System.out.println(
+            "Con el mensaje: "
+            + mensaje);
     }
-
-
-    
-    }
+}
